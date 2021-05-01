@@ -1,0 +1,116 @@
+baseURL = "https://metahx.github.io/"
+languageCode = "en-us"
+title = "MetaHX"
+theme = "slick"
+publishDir = "./docs"
+
+disqusShortname = "MetaHX"
+
+[permalinks]
+    post = "/post/:year/:month/:day/:slug/"
+    note = "/note/:year/:month/:day/:slug/"
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true               # Allow html (needed for some shortcodes)
+    [markup.highlight]
+        codeFences = true               # Enable highlighting inside codefences
+        guessSyntax = true              # Highlight code without language tag
+        noClasses = false               # Use the theme's style sheet
+
+canonifyURLs = true
+preserveTaxonomyNames = true
+
+# Configure pagination
+paginate = 10
+paginatePath = "page"
+
+[params]
+    # Site subtitle (not shown if commented out or set to false)
+    subtitle = "MetaHX CityU of HK"
+
+    # Site description
+    description = "MetaHX site for CityU of HK."
+
+    # Custom css file (relative to baseURL - place below static or assets folder)
+    css = "custom.css"
+
+    # Define formatting of dates
+    # (optional, falls back to RFC822 format if not set)
+    # For reference to date and time formatting, see:
+    # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+    # Make sure to set showMetaDates to true to see any dates
+    dateFmt = "Mon, 02 Jan 2006 15:04:05 MST"
+
+    # Customize the text of the 404 page here
+    errorPageText = "There's nothing to see here, please move along!"
+
+    # Header with title/subtitle can be disabled here.
+    # (If you disable this, add some link on the index page inside menu.main,
+    #  otherwise your visitors will get confused and lost...)
+    showNavHeader = true
+
+    # Decide if only summaries are shown on the main page or the full content
+    showFullContent = true
+
+    # If false no pagination is shown when there is nothing to paginate
+    showEmptyPagination = true
+
+    # If false the dates for the posts are not shown
+    showMetaDates = false
+
+    # If false the taxonomy links for the posts are not shown
+    showMetaLinks = false
+
+    # Uses Hugo internal templates if set
+    opengraph = false
+    schema = false
+    twitter_cards = false
+
+
+# Define all supported taxonomies (add series to the default)
+[taxonomies]
+    categories = "categories"
+
+
+[author]
+    name = "Some Author"
+    email = "mail@example.org"
+
+
+[services.rss]
+    # limit the length of the rss feed (default: unlimited)
+    limit = 0
+
+
+[menu]
+
+    # Configure main menu entries (header)
+    # Currently set to list all taxonomies and posts
+    [[menu.main]]
+        identifier = "homeitis"
+        name = "Home"
+        title = "Home"
+        url = "/"
+        weight = 1
+
+    [[menu.main]]
+        identifier = "categories"
+        name = "Categories"
+        title = "All categories"
+        url = "/categories/"
+        weight = 2
+
+
+
+    # Define the entries for post metadata
+    # Identifiers should match with the taxonomy entries
+    [[menu.meta]]
+        identifier = "categories"
+        name = "Categories"
+        weight = 1
+
+
+
+

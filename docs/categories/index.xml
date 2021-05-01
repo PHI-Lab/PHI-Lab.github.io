@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on MetaHX</title>
+    <link>https://metahx.github.io/categories/</link>
+    <description>Recent content in Categories on MetaHX</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>mail@example.org (Some Author)</managingEditor>
+    <webMaster>mail@example.org (Some Author)</webMaster><atom:link href="https://metahx.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reinforcement Learning</title>
+      <link>https://metahx.github.io/categories/reinforcement-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>mail@example.org (Some Author)</author>
+      <guid>https://metahx.github.io/categories/reinforcement-learning/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

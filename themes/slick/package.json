@@ -1,0 +1,45 @@
+{
+  "name": "slick",
+  "version": "0.3.2",
+  "description": "A Hugo theme focused on content, cleanliness, speed, responsiveness and privacy.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spookey/slick.git"
+  },
+  "author": "Frieder Grießhammer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spookey/slick/issues"
+  },
+  "homepage": "https://github.com/spookey/slick#readme",
+  "dependencies": {
+    "purecss": "^2.0.3",
+    "source-code-pro": "^2.30.2",
+    "source-sans-pro": "^3.6.0",
+    "source-serif-pro": "^3.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.5",
+    "del-cli": "^3.0.1",
+    "postcss-discard-comments": "^4.0.2",
+    "postcss-import": "^12.0.1",
+    "postcss-url": "^8.0.0",
+    "rollup": "^2.28.2",
+    "rollup-plugin-copier": "^1.1.0",
+    "rollup-plugin-postcss": "^3.1.8",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.27.3",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.3"
+  },
+  "scripts": {
+    "preversion": "npm run dist",
+    "version": "git add -Afv assets static",
+    "dev": "rollup -c --environment BUILD:dev",
+    "devdist": "rollup -c --environment BUILD:dist",
+    "dist": "npm run clean && npm run devdist",
+    "watch": "npm run dev -- --watch",
+    "clean": "del 'assets' 'static' '_sites/*/public' '_sites/*/resources'",
+    "site": "./build-site.js"
+  }
+}
